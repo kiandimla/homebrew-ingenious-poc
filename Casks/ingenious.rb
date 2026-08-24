@@ -1,15 +1,15 @@
 cask "ingenious" do
-  version "4.0.0"
-  sha256 "7074bca3fab2f920d95762e0d848b3ae4e08bc38b2a00d34c019c818bd70d5e8"
+  version "4.0.0,1"
+  sha256 "aed09b6cdfeaf6ce505e5b9aba2b13c82ae9ade0aebd8d0a27b74d6ec6558e74"
 
-  url "https://github.com/kiandimla/INGenious/releases/download/v#{version}/INGenious-#{version}.pkg"
+  url "https://github.com/kiandimla/INGenious/releases/download/v#{version.csv.first}-r#{version.csv.second}/INGenious-#{version.csv.first}.pkg"
   name "INGenious"
   desc "Playwright-based test automation studio"
   homepage "https://github.com/ing-bank/INGenious"
 
   depends_on :macos
 
-  pkg "INGenious-#{version}.pkg"
+  pkg "INGenious-#{version.csv.first}.pkg"
 
   uninstall pkgutil: "com.ing.ingenious.pkg"
 end
