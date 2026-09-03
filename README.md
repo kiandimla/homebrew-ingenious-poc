@@ -2,15 +2,10 @@
 
 ## How do I install these formulae?
 
-`brew install ingenious/poc/<formula>`
-
-Or `brew tap ingenious/poc` and then `brew install <formula>`.
-
-Or, in a `brew bundle` `Brewfile`:
-
 ```ruby
-tap "ingenious/poc"
-brew "<formula>"
+brew tap kiandimla/ingenious-poc
+brew trust kiandimla/ingenious-poc/ingenious
+brew install ingenious
 ```
 
 ## Documentation
